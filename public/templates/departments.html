@@ -1,0 +1,11 @@
+<h2>You can see the list of departments here:</h2>
+<table class="table table-bordered text-center">
+	<tr><th>Title</th></tr>
+	<tr ng-repeat="department in departments">
+		<td>{{department.title}}</td>
+		<td class="c1" clicked-item fnc="editDepartment({{department.id}})">edit</td>
+	</tr>
+</table>
+<br />
+<input type="text" name="newDepartment" placeholder="Name for the new department" ng-model="departmentName" required />
+<button class="button large expand radius" ng-click="saveDepartment()">Save</button>

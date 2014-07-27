@@ -1,0 +1,25 @@
+<div id="home">
+  <div class="large-6 large-offset-3">
+    <h2>Welcome to the Tickets system!</h2>
+    <h4>You can see the list of tickets here:</h4>
+	<table class="table table-bordered text-center">
+		<tr><th>Title</th><th>Department</th><th>Status</th></tr>
+		<tr ng-repeat="ticket in tickets">
+			<td>{{ticket.title}}</td>
+			<td>{{ticket.department}}</td>
+			<td>{{ticket.status}}</td>
+			<td class="c1" ng-show="isAdmin" clicked-item fnc='enterTicket({{ticket}})'>view</td>
+		</tr>
+	</table>
+	<p>
+	<button class="button large expand radius" ng-hide="isAdmin" ng-click="openTicket()">Open a new ticket</button>
+	<button class="button large expand radius" ng-show="isAdmin" ng-click="go2Departments()">Go to a departments view</button>
+	</p>
+	<br />
+    <div>
+      <div class="large-12 columns">
+        <button class="button large expand radius" ng-click="logout()">Log Out</button>
+      </div>
+    </div>
+  </div>
+</div>

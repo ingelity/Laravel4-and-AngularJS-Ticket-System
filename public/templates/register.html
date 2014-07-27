@@ -1,0 +1,26 @@
+<div id="register" class="row">
+  <div class="large-6 large-offset-3">
+  <div class="alert-box">{{ regMessage }}</div>
+    <form ng-submit="register()">
+      <fieldset class="radius">
+        <div class="row">
+          <div class="large-6 columns">
+            <input type="text" name="email" placeholder="email" ng-model="register.email" required/>
+          </div>
+            <div class="large-6 columns">
+            <input type="password" name="password" placeholder="password" ng-model="register.password" required/>
+          </div>
+	  <div class="large-6 columns">
+            <input type="password" name="repeatPassword" placeholder="repeat password" ng-model="register.password2" required/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <button type="submit" class="button large expand radius">Sign Up</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
