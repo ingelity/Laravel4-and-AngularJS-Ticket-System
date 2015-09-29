@@ -7,7 +7,7 @@ class TicketController extends BaseController {
 
 	public function __construct()
 	{
-	    $this->adminEmail = "aleksandarjovanovic2013@gmail.com";
+	    $this->adminEmail = "myemail@somewhere.com";
 	}
 	
 	/**
